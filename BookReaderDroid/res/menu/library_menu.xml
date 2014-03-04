@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/menu_library_view_mode"
+        android:icon="@drawable/ic_action_grid_light"
+        android:title="View Mode"
+        android:showAsAction="always">
+        
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+			        android:id="@+id/submenu_shelves_view"
+			        android:title="@string/shelves_view" />
+			    
+			    <item
+			        android:id="@+id/submenu_list_view"
+			        android:title="@string/list_view" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu_scan_books"
+        android:title="@string/scan_books"
+        android:icon="@drawable/ic_menu_refresh_dark"
+        android:showAsAction="ifRoom" />
+    
+    <item
+        android:id="@+id/menu_preferences"
+        android:title="@string/prefs"
+        android:icon="@drawable/ic_menu_settings_dark"
+        android:showAsAction="ifRoom" />
+    
+    <item
+        android:id="@+id/menu_download"
+        android:title="@string/download"
+        android:icon="@drawable/download"
+        android:visible="false" />
+    
+    <item
+        android:id="@+id/menu_about"
+        android:title="@string/about"
+        android:icon="@drawable/info" />
+</menu>

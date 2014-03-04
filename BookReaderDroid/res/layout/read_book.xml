@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/rel" >
+    
+    <!-- <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/outerContainer"> -->
+        
+        <ViewSwitcher 
+		    android:id="@+id/mainContainer"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		   	android:orientation="vertical">
+		    
+            <FrameLayout
+                android:id="@+id/bookViewContainer"
+                android:layout_width="fill_parent"
+		    	android:layout_height="fill_parent">
+		    	
+			    <com.vng.bookreader.view.BookView 
+			        android:id="@+id/bookView"
+			        android:layout_width="fill_parent"
+			        android:layout_height="fill_parent" />
+			    
+	    	    <com.vng.bookreader.selection.SelectionPointerImageView 
+			        android:id="@+id/startTextSelectView"
+			        android:layout_width="35dp"
+			        android:layout_height="40dp"
+			        android:src="@drawable/text_select_handle_middle"
+			        android:padding="0dp"/>
+			    
+		    	<com.vng.bookreader.selection.SelectionPointerImageView 
+			        android:id="@+id/endTextSelectView"
+			        android:layout_width="35dp"
+			        android:layout_height="40dp"
+			        android:src="@drawable/text_select_handle_middle"
+			        android:padding="0dp"/>
+		    </FrameLayout>
+		    
+		    <com.vng.bookreader.view.AnimatedImageView
+		        android:id="@+id/dummyView"
+		        android:layout_width="fill_parent"
+	        	android:layout_height="fill_parent" />
+		</ViewSwitcher>
+		
+         <!-- <fi.harism.curl.CurlView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/curlView" />
+         
+    </FrameLayout> -->
+	
+	<RelativeLayout 
+        	android:id="@+id/titleBarLayout" 
+        	android:layout_width="fill_parent" 
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"        
+        	android:layout_alignTop="@id/mainContainer"
+        	android:visibility="gone"
+        	>   
+        	    
+         <TextView
+                android:id="@+id/titleBarText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"                
+                android:layout_alignParentTop="true"                             
+                android:background="@color/translucent_black"                
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+          <TextView
+                android:id="@+id/authorText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"                
+                android:textColor="@color/opaque_white"
+                android:layout_below="@+id/titleBarText"                              
+                android:background="@color/translucent_black"                
+                android:textAppearance="?android:attr/textAppearanceSmall" />     
+         
+           <TextView
+                android:id="@+id/percentageText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/opaque_white"
+                android:text="0%  "
+                android:layout_below="@id/authorText"
+                                       
+                android:background="@color/translucent_black"                
+                android:textAppearance="?android:attr/textAppearanceSmall" /> 
+                
+			<SeekBar android:id="@+id/titleProgress"
+	        	style="?android:attr/progressBarStyleHorizontal"
+	        	android:layout_width="fill_parent"        	
+	        	android:layout_height="wrap_content"        
+	        	android:layout_below="@id/percentageText"        	        	
+				android:background="@color/translucent_black" />   
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="142dip">
+    
+	<ImageView 
+	    android:id="@+id/bookCover"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center"
+	    android:layout_gravity="bottom"
+	    android:src="@drawable/book"
+	    android:layout_marginTop="12dip"/>
+	
+	<TextView 
+	    android:id="@+id/bookLabel"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="Small Text"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:gravity="center"
+	    android:layout_gravity="bottom"/>
+</FrameLayout>

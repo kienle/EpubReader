@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item 
+        android:id="@+id/menu_day_mode"
+        android:title="@string/menu_day_mode"
+        android:icon="@drawable/sun"
+        android:showAsAction="ifRoom" />
+    
+	<item
+	    android:id="@+id/menu_night_mode"
+	    android:title="@string/menu_night_mode"
+	    android:icon="@drawable/moon"
+	    android:showAsAction="ifRoom" />
+	
+	<item 
+	    android:id="@+id/menu_toc"
+	    android:title="@string/menu_toc"
+	    android:icon="@drawable/ic_popup_toc"
+	    android:showAsAction="ifRoom"/>
+	
+	<item 
+	    android:id="@+id/menu_preferences"
+	    android:title="@string/menu_prefs"
+	    android:icon="@drawable/ic_menu_settings_dark"
+	    android:showAsAction="ifRoom"/>
+	
+	<item 
+	    android:id="@+id/menu_about"
+	    android:title="@string/menu_about"
+	    android:icon="@drawable/info"
+	    android:showAsAction="never"/>
+</menu>
